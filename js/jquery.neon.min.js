@@ -1,0 +1,7 @@
+/*************************************************
+**  jQuery neon version 1.2.0
+**  copyright Anton Konovalov, licensed GPL & MIT
+**  http://extempl.com/
+**  requires:getRgb
+**************************************************/
+(function(a){var c=function(a,b){return Math.floor(Math.random()*(b-a+1)+a)},b=function(a,c,b){return"0 0 "+c+"em rgba("+a[0]+", "+a[1]+", "+a[2]+", "+b+")"},e=function(a){return b(a,.1,.6)+", "+b(a,.6,.2)+", "+b(a,1.2,.4)+", "+b(a,1.8,.6)+", "+b(a,2.4,.8)+", .02em .02em  .1em rgba(0, 0, 0, 0.8)"},d=function(){a(this).blinkNeon({color:a(this).css("color")})};a.initNeon=function(){var b="[data-neon-params='blinks']";a("[data-neon='basic']").filter(b).each(d);a("[data-neon='custom']").find(b).each(d);f(a("[data-neon='auto']")).find(b).each(d)};var f=function(b){var d=b.text().replace(/./g,"<span>$&</span>");b.html(d);b.children().each(function(){var b=[c(10,255),c(10,255),c(10,255)];a(this).css({color:"rgb("+b[0]+", "+b[1]+", "+b[2]+")",textShadow:e(b)});c(0,10)==10&&a(this).attr("data-neon-params","blinks")});return this};a.fn.blinkNeon=function(b){var d=a(this);b=a.extend({state:"on",color:"#fff",colorOff:"#444",textShadowOff:".02em .02em  .1em rgba(0, 0, 0, 0.8)",rgb:a.getRgb(b.color)},b);if(b.state=="off")d.css({color:b.color,textShadow:e(b.rgb)});else d.css({color:b.colorOff,textShadow:b.textShadowOff});setTimeout(function(){d.blinkNeon({state:b.state=="on"?"off":"on",color:b.color,rgb:b.rgb})},c(100,1500))}})(jQuery)
