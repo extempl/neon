@@ -49,9 +49,7 @@
 
 	var generateNeon = function($elem) {
 
-		var spans = $elem.text().replace(/./g , '<span>$&</span>');
-
-		$elem.html(spans);
+		$elem.html($elem.text().replace(/./g , '<span>$&</span>'));
 
 		$elem.children().each(function() {
 			var rgb = [random(10, 255), random(10, 255), random(10, 255)];
