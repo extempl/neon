@@ -13,7 +13,7 @@
 </head>
 <body>
 	<header>
-		<p class="preface">This is the demo of <a href="http://extempl.com/neon-6.html">Neon font JQuery plugin</a></p>
+		<p class="preface">This is the demo of <a href="https://github.com/extempl/neon">Neon font JQuery plugin</a></p>
 	</header>
 	<fieldset class="main-block">
 		<legend>Source</legend>
