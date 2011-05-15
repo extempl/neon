@@ -24,3 +24,7 @@
 				0 0 2.4em rgba(255, 255, 255, .8),
 				.02em .02em  .1em rgba(0, 0, 0, 1);
 }
+
+.main-block {
+	text-align: center;
+}
